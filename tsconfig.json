@@ -28,7 +28,7 @@
     // "types": [],
     // "allowUmdGlobalAccess": true,
     // "moduleSuffixes": [],
-    // "resolveJsonModule": true,
+    "resolveJsonModule": true,
     // "noResolve": true,
     // "allowJs": true,
     // "checkJs": true,
