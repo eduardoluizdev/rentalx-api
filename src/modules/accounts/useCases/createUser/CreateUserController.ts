@@ -12,7 +12,6 @@ class CreateUserController {
       name,
       email,
       password,
-      username,
       driver_license,
     });
 
