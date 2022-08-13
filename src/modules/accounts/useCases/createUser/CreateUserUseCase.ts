@@ -17,6 +17,7 @@ class CreateUserUseCase {
     email,
     password,
     driver_license,
+    isAdmin,
   }: ICreateUserDTO): Promise<void> {
     const passwordHash = await hash(password, 8);
 
@@ -31,6 +32,7 @@ class CreateUserUseCase {
       email,
       password: passwordHash,
       driver_license,
+      isAdmin,
     });
   }
 }

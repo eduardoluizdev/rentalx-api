@@ -19,6 +19,7 @@ class UsersRepository implements IUsersRepository {
     driver_license,
     id,
     avatar,
+    isAdmin,
   }: ICreateUserDTO): Promise<void> {
     const user = this.repository.create({
       name,
@@ -27,6 +28,7 @@ class UsersRepository implements IUsersRepository {
       driver_license,
       id,
       avatar,
+      isAdmin,
     });
 
     await this.repository.save(user);

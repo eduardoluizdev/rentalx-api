@@ -40,6 +40,10 @@ class User {
     if (!this.id) {
       this.id = uuidV4();
     }
+
+    if (!this.avatar) {
+      this.avatar = "";
+    }
   }
 }
 

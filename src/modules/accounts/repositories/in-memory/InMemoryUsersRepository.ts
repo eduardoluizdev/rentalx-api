@@ -1,5 +1,5 @@
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
-import { User } from "@modules/accounts/entities/User";
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 class InMemoryUsersRepository implements IUsersRepository {
@@ -10,10 +10,11 @@ class InMemoryUsersRepository implements IUsersRepository {
     password,
     email,
     driver_license,
+    isAdmin,
   }: ICreateUserDTO): Promise<void> {
     const user = new User();
 
-    Object.assign(user, { name, password, email, driver_license });
+    Object.assign(user, { name, password, email, driver_license, isAdmin });
 
     this.users.push(user);
   }
