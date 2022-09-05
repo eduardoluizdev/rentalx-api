@@ -10,11 +10,11 @@ class InMemoryUsersRepository implements IUsersRepository {
     password,
     email,
     driver_license,
-    isAdmin,
+    admin,
   }: ICreateUserDTO): Promise<void> {
     const user = new User();
 
-    Object.assign(user, { name, password, email, driver_license, isAdmin });
+    Object.assign(user, { name, password, email, driver_license, admin });
 
     this.users.push(user);
   }
